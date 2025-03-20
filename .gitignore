@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+test/
+interpreter.cbp
+interpreter.depend
+text.txt
+obj/
