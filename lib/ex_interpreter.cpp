@@ -45,11 +45,16 @@ bool is_double(const std::string s)
 
 double operation(const double a, const double b, const std::string param)
 {
-    if (param == "+") { return a+b; }
-    if (param == "-") { return a-b; }
-    if (param == "*") { return a*b; }
-    if (param == "/") { return b != 0 ? a/b : NAN; }
-    if (param == "^") { return std::pow(a, b); }
+    if (param == "+")  { return a+b; }
+    if (param == "-")  { return a-b; }
+    if (param == "*")  { return a*b; }
+    if (param == "/")  { return b != 0 ? a/b : NAN; }
+    if (param == "^")  { return std::pow(a, b); }
+    if (param == "==") { return double(a == b); }
+    if (param == ">")  { return double(a > b); }
+    if (param == "<")  { return double(a < b); }
+    if (param == ">=") { return double(a >= b); }
+    if (param == "<=") { return double(a <= b); }
 
     return double(0);
 }
